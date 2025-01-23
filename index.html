@@ -1,27 +1,86 @@
-<!-- HTML
+<!-- 
+    HTML
 
-- Interface simples;
-- Formulário para cadastro dos dados;
-- utilizar atributos method e action;
+- menu de navegação dinâmico (considerar "tres tracos") que é puxado do lado direito da tela
+
 -->
-
-<!-- PHP
-
-- Armazena as informações enviadas através do $_POST['nome do campo'];
-
-- Utiliza PDO (PHP Data Object) para preparar, substituir, executar e transferir as informações recebidas para um banco de dados;
-
-- Tela de "Cadastro realizado com sucesso!";
- -->
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>&#x1F4B8; Orçamento Mensal &#x1F4B8;</title>
+    <link rel="stylesheet" href="./src/style_orcamento.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <h1>Planner &#x1F4B8;</h1>
+        <h2>Diga adeus às confusões financeiras no final do mês!</h2>
+        <br>
+        <p>Este é um planejador de orçamento mensal desenvolvido para fins de organização e educação financeira.</p>
+        <p>Considere deixar um feedback!</p>
+    </header>
+    <!-- TESTES TESTES TESTES TESTES TESTES  -->
+    <!-- TESTES TESTES TESTES TESTES TESTES  -->
+    <!-- TESTES TESTES TESTES TESTES TESTES  -->
+    <!-- <div>
+        <ul style="list-style-type: square;">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+        </ul>
+    </div> -->
+    <div class="display">
+        <main>
+            <form action="./src/planner.php" method="post">
+                <label for="tipo">Escolha o tipo de compra:</label>
+                <select name="tipo" id="tipo">
+                    <option value="Comida">Comida</option>
+                    <option value="Entretenimento">Entretenimento</option>
+                    <option value="Cuidados">Cuidados</option>
+                    <option value="Presentes">Presentes</option>
+                </select>
+                <br>
+                <br>
+                <label for="valor">Digite o valor gasto:</label>
+                <input type="number" name="valor" id="valor">
+                <br>
+                <br>
+                <label for="local">Digite o local onde o valor foi gasto:</label>
+                <input type="text" name="local" id="local">
+                <br>
+                <br>
+                <label for="metodo">Selecione o método de pagamento:</label>
+                <select name="metodo" id="metodo">
+                   <option value="Credito">Crédito</option>
+                   <option value="Debito">Débito</option>
+                   <option value="Dinheiro">Dinheiro</option>
+                   <option value="Pix">PIX</option>
+                </select>
+                <br>
+                <br>
+                <input type="submit" value="REGISTRAR" id="btnRegistro">
+            </form>
+        </main>
+        <section>
+            <table>
+                <tr>
+                    <th>Lorem ipsum dolor sit amet.</th>
+                    <th>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, voluptas?</th>
+                </tr>
+                <tr>
+                    <td>Lorem, ipsum.</td>
+                    <td>Lorem, ipsum dolor.</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <footer>
+        <p><a href="https://github.com/hmeirelles0" target="_blank" rel="external">hmeirelles0&copy;</a></p>
+    </footer>
 </body>
 </html>

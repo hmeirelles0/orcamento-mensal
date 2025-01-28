@@ -1,22 +1,20 @@
 <?php
+// BACKLOG
 
-/* PHP
-
-- Header() / location to return to homepage;
- */
+// --> Tabela que recebe os valores de uma consulta geral
 
     //Inicializando variáveis de conexão ao banco de dados
     $local_server = "ULTRON";
     $usuario_server = "sa";
     $senha_server = "Eldritch1890";
     $banco_de_dados = "orcamento";
-    
+
     try {
         //Utilizando PDO (PHP Data Object)
         $pdo = new PDO ("sqlsrv:server=$local_server;database=$banco_de_dados", $usuario_server, $senha_server);
     } catch (Exception $ex) {
         echo "Erro ao tentar conexão com o banco de dados:\n" . $ex->getMessage();
-        die; 
+        die;
     }
 
     //Atribuição de tabela de interesse a uma variável
@@ -25,7 +23,7 @@
     try {
         //Preparo da instrução SQL
         $sql = $pdo->prepare('INSERT INTO ' . $compra . ' VALUES (:tipo, :valor, :local, :metodo);');
-        
+
         $tipo = $_POST['tipo'];
         $valor = $_POST['valor'];
         $local = $_POST['local'];
@@ -39,7 +37,7 @@
 
         //Execução
         $sql->execute();
-        
+
         //Retorno visual da inclusão no banco de dados ao usuário
         echo "
             <body style= 'margin: 0%;text-align: center; background-image: linear-gradient(#10278f, #77db95);'>

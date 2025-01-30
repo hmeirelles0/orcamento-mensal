@@ -1,7 +1,7 @@
 <?php
 // BACKLOG
 
-// Nada por enquanto
+// Adicionar campos de data e descrição;
 
     // Inicializando variáveis de utilidade
 

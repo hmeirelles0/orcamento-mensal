@@ -17,7 +17,7 @@ INSERT INTO tblCompras VALUES (
 SELECT * FROM tblCompras;
 
 INSERT INTO tblCompras VALUES (
-	'Presentes', 200.00, 'Riachuelo', 'Crédito'
+	'Presentes', 200.00, 'Riachuelo', 'Crï¿½dito'
 );
 
 SELECT * FROM tblCompras WHERE metodo_compra = 'PIX';
